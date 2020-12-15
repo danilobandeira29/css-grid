@@ -139,3 +139,52 @@ O uso dessas propriedades são raras, pois só é aplicado caso o grid seja meno
 5. space-around
 6. space-between
 7. space-evenly
+
+#### items
+`justify-items` e `align-items` permite alinhas os itens do nosso grid em qualquer espaço disponível na célula que ele habitar.
+
+**Se o item for menor que a area da célula da grid, então eu posso utilizar `justify/align-items` no próprio grid para alinhar cada item.**
+
+```css
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height:100vh;
+}
+
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: black;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+
+  justify-items: center;
+  align-items: center;
+
+}
+
+.container > div {
+  background: #ccc;
+
+  height: 50%;
+  width: 50%;
+}
+```
+Nessa imagem, a grid ocupa toda o espaço disponível da tela(height e width), porém o contéudo da célula é menor do que o espaço disponível da célula. Logo, posso alinhar o contéudo de cada célula utilizando o `item`.
+<p align="center">
+  <img src="https://ik.imagekit.io/xfddek6eqk/grid-items_fubqPg7gy.png"/>
+</p>
+
+4 valores disponiveis para os alinhamentos:
+1. start
+2. end
+3. center
+4. stretch
