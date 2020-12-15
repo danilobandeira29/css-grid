@@ -119,3 +119,23 @@ Vamos separá-los em 2 grupos:
 Sabendo que o grid é bidimensional, ou seja, linhas e colunas, temos:
 - **eixo x** é horizontal.
 - **eixo y** é vertical.
+
+### content, items e self
+
+Ao utilizar `justify` ou `align` temos acesso as propriedades: `content`, `items` e `self`.
+
+#### content
+`justify-content` e `align-content` permite alinhar o próprio grid, relativo ao espaço fora do grid.
+
+**Ou seja, me permite alinhar o grid de acordo com o espaço em volta dele, o espaço em que ele está inserido**
+
+O uso dessas propriedades são raras, pois só é aplicado caso o grid seja menor que a área definida.(Por exemplo, quando usamos em px o tamanho do grid, poderemoes terminar com o grid pequeno para o tamanho da área do grid)
+
+7 valores disponiveis para os alinhamentos:
+1. start
+2. end
+3. center
+4. stretch
+5. space-around
+6. space-between
+7. space-evenly
