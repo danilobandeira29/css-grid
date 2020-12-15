@@ -50,3 +50,52 @@ Posso alterar a ordem que os items são mostrados na grid as propriedades acima,
 <p align="center">
   <img src="https://ik.imagekit.io/xfddek6eqk/grid-template-example_Qqfu8gksa.png"/>
 </p>
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 20vh 70vh 10vh;
+  grid-template-areas: 
+    "h h"
+    "m a"
+    "f f"
+}
+
+header {
+  background: #fc5c9c;
+
+  /*sem shorthand*/
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  /*ou posso utilizar shorthand dessa forma*/
+  grid-column: 1/3;
+  grid-row: 1/2;
+
+  /*ou posso utilizar o area o item, caso esteja sendo usando no container*/
+  grid-area: h;
+}
+
+main {
+  background: #fccde2;
+
+  grid-area: m;
+}
+
+aside {
+  background: #fcefee;
+
+  grid-area: a;
+}
+
+footer {
+  background:#c5e3f6;
+
+  grid-area: f;
+}
+```
+
+Com o `grid-template-areas` eu dou nomes as linhas e colunas, ao invés de me preocupar com as linhas imaginárias(virtuais) da grid.
