@@ -99,3 +99,23 @@ footer {
 ```
 
 Com o `grid-template-areas` eu dou nomes as linhas e colunas, ao invés de me preocupar com as linhas imaginárias(virtuais) da grid.
+
+## GRID Alinhamentos
+
+Existem 6 propriedades de alinhamentos:
+1. `justify-content`
+2. `align-content`
+3. `justify-items`
+4. `align-items`
+5. `justify-self`
+6. `align-self`
+
+Vamos separá-los em 2 grupos:
+1. `justify` e `align`
+2. `content`, `items` e `self`
+
+### justify e align
+
+Sabendo que o grid é bidimensional, ou seja, linhas e colunas, temos:
+- **eixo x** é horizontal.
+- **eixo y** é vertical.
