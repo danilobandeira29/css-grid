@@ -188,3 +188,44 @@ Nessa imagem, a grid ocupa toda o espaço disponível da tela(height e width), p
 2. end
 3. center
 4. stretch
+
+#### self
+
+`justify-self` e `align-self` permite alinhar o item em si.
+
+Faz a mesma coisa do `justify-items` e `align-items`, porém, aplicado diretamente no elemento de um grid ao invés do container da grid.
+
+```css
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height:100vh;
+}
+
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: black;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+
+}
+
+.container > div {
+  background: #ccc;
+
+  height: 50%;
+  width: 50%;
+
+  justify-self: center;
+  align-self: center;
+}
+
+```
